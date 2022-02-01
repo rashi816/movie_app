@@ -1,0 +1,115 @@
+:root
+{
+    --primary:rgb(34, 39, 77);
+    --secondary:#373b69;
+}
+body
+{
+   background-color: var(--primary);
+    margin: 0;
+}
+*
+{
+    box-sizing: border-box;
+}
+header
+
+{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary);
+}
+.search
+{
+    background-color: transparent;
+    border:2px solid var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: white;
+    font-family: inherit;
+}
+.search:focus
+{
+    background-color: var(--primary);
+    outline: 0;
+}
+.search::placeholder
+{
+    color: #7378c5;
+}
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie
+{
+    width: 300px;
+    height: auto;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,1);
+    background-color: var(--secondary);
+    position: relative;
+    overflow: hidden;
+}
+.movie img
+{
+    width: 100%;
+}
+
+.movie-info
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem 0.5rem;
+    letter-spacing: 0.1rem;
+    font-size: 20px;
+}
+.movie-info h3
+{
+    margin-top: 0;
+}
+
+.movie-info span
+{
+    background-color: var(--primary);
+    padding:  0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.movie-info span.green
+{
+    color: lightgreen;
+}
+.movie-info span.orange
+{
+    color: orange;
+}
+.movie-info span.red
+{
+    color: red;
+}
+.overview
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 1rem;
+    padding-bottom: 40px;
+    max-width: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+
+}
+.movie:hover .overview
+{
+    transform: translateY(0);
+}
