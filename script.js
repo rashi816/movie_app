@@ -33,7 +33,7 @@ function showMovies(data)
         ${overview}
         </div>
         `
-        main.appendChild(movieElement)
+        main.appendChild(movieElement);
     })
 }
 function getColor(vote){
